@@ -8,10 +8,13 @@
 		</div>
 		<v-divider color="#D4D5D8"></v-divider>
 
-		<div class="d-flex justify-center align-center flex-column pa-4">
-			Lorem ipsum dolor sit, amet consectetur, adipisicing elit. Natus dicta, aspernatur culpa error soluta
-			aliquam impedit, animi libero vel architecto perspiciatis, laborum. Cum fuga eum ipsam mollitia minima
-			ipsum quidem.
+		<div class="pa-4">
+			<TableUser />
+
+			<div class="text-center my-8">
+				<v-btn outlined color="design" class="mb-4">Save user</v-btn>
+				<h6 class="small-text">You can view the above user’s details after saving the changes</h6>
+			</div>
 		</div>
 	</div>
 </template>
@@ -37,8 +40,15 @@ export default {
 }
 .subtitle-text {
 	font-weight: 400;
-	font-size: 16px;
-	line-height: 139.52%;
-	color: #2c2a2a;
+	font-size: 12px;
+	line-height: 15px;
+	color: #404040;
+}
+.small-text {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 10px;
+	line-height: 12px;
+	color: #404040;
 }
 </style>
