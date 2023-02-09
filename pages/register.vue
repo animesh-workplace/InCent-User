@@ -17,22 +17,42 @@
 			</div>
 		</div>
 
-		<v-sheet class="rounded-lg center pt-4 px-6 pb-10" elevation="4">
-			<!-- <StepperStep1 /> -->
-			<StepperStep2 />
+		<v-sheet class="rounded-lg center pt-4 px-6 pb-10" elevation="4" v-if="step_info != 4">
+			<StepperStep1 v-if="step_info == 1" @NextStep2="step_info = 2" />
+			<StepperStep2 v-if="step_info == 2" @NextStep3="step_info = 3" />
+			<StepperStep3 @Finished="dialog = true" v-if="step_info == 3" @NextStep4="step_info = 4" />
 		</v-sheet>
+
+		<v-dialog v-model="dialog" max-width="400">
+			<v-card class="pt-10 pb-4 px-4">
+				<v-card-text class="text-center font-title">
+					<div class="d-block mb-2">
+						<img src="@/assets/check_icon.png" alt="" />
+					</div>
+					<div>Submission Successful</div>
+					<div>
+						Thank you for registering on our platform. Your details have been successfully received.
+						Authorization Team shall review and update you at the earliest. You can check the
+						application status by Login.
+					</div>
+				</v-card-text>
+
+				<v-card-actions>
+					<div class="mx-auto">
+						<!-- Need to add stepper reducer to reduce to step 1 -->
+						<v-btn outlined color="design" class="mb-4"> Login </v-btn>
+					</div>
+				</v-card-actions>
+			</v-card>
+		</v-dialog>
 	</v-sheet>
 </template>
 
 <script>
 export default {
 	data: () => ({
-		other_items: [
-			{ title: 'TAN No.', subtitle: 'tan_no', link: 'tan_document', file_name: 'Company-tan.pdf' },
-			{ title: 'PAN No.', subtitle: 'pan_no', link: 'pan_document', file_name: 'Company-pan.pdf' },
-			{ title: 'CIN No.', subtitle: 'cin_no', link: 'cin_document', file_name: 'Company-cin.pdf' },
-			{ title: 'GST No.', subtitle: 'gst_no', link: 'gst_document', file_name: 'Company-gst.pdf' },
-		],
+		dialog: false,
+		step_info: 1,
 	}),
 	layout: 'register',
 	methods: {},
