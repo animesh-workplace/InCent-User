@@ -4,7 +4,7 @@
 			<td class="text-right">
 				<h3 class="company-title">Registered Company Name <sup class="red--text">*</sup></h3>
 			</td>
-			<td class="mr-3">
+			<td>
 				<v-text-field
 					outlined
 					class="mt-2"
@@ -88,9 +88,23 @@ export default {
 
 <style scoped>
 table {
-	border-spacing: 25px 10px;
+	border-spacing: 20px 5px;
 }
 td {
 	vertical-align: middle;
+}
+.company-title {
+	color: #404040;
+	font-weight: 400;
+	font-style: normal;
+	line-height: 19px;
+	font-size: 15px;
+}
+.company-subtitle {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 10px;
+	line-height: 12px;
+	color: #525252;
 }
 </style>
