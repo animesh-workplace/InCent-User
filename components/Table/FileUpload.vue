@@ -108,8 +108,8 @@ td {
 	color: #404040;
 	font-weight: 400;
 	font-style: normal;
-	line-height: 19px;
-	font-size: 16px;
+	line-height: 17px;
+	font-size: 13px;
 }
 .company-subtitle {
 	font-style: normal;
