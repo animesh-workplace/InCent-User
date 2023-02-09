@@ -14,9 +14,11 @@
 		<FormCompanyDetail />
 
 		<div class="mt-6 text-center">
-			<v-btn outlined color="design">Back</v-btn>
+			<v-btn outlined color="design" class="px-7">Back</v-btn>
 			<div class="ml-4 d-inline">
-				<v-btn dark color="design">Next <v-icon class="pl-2 pr-0">mdi-chevron-right</v-icon></v-btn>
+				<v-btn dark color="design" class="text-center px-6">
+					Next<v-icon>mdi-chevron-right</v-icon>
+				</v-btn>
 			</div>
 		</div>
 	</div>
