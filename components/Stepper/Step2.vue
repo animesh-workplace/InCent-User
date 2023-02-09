@@ -12,18 +12,18 @@
 		</div>
 		<v-divider color="#D4D5D8"></v-divider>
 
-		<div class="d-flex justify-center align-center flex-column">
-			<img src="@/assets/new_user_bg.png" alt="Users" width="300" />
+		<div class="d-flex justify-center align-center flex-column min-height">
+			<img src="@/assets/new_user_bg.png" alt="Users" width="200" class="mb-4" />
 			<div class="text-center">
-				<h5 class="header-text text-h6">No Users Added yet</h5>
-				<h5 class="header-text text-h6">Start by Adding your first User</h5>
-				<v-btn outlined rounded color="design" @click="dialog = true"
-					><v-icon class="mr-2">mdi-plus</v-icon>Add new user</v-btn
-				>
+				<h5 class="user-text">No Users added yet</h5>
+				<h5 class="user-subtitle-text mb-10">Start by adding your first user</h5>
+				<v-btn outlined rounded color="design" @click="dialog = true">
+					<v-icon class="mr-2">mdi-plus</v-icon>Add new user
+				</v-btn>
 			</div>
 		</div>
 
-		<v-dialog v-model="dialog" max-width="1200"">
+		<v-dialog v-model="dialog" max-width="1200">
 			<FormAddUser />
 		</v-dialog>
 	</div>
@@ -42,4 +42,34 @@ export default {
 }
 </script>
 
-<style></style>
+<style scoped>
+.header-text {
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 24px;
+	color: #26467e;
+}
+.subtitle-text {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 139.52%;
+	color: #2c2a2a;
+}
+.min-height {
+	min-height: 50vh;
+}
+.user-text {
+	font-size: 18px;
+	font-weight: 500;
+	color: #2c2a2a;
+	line-height: 22px;
+	font-style: normal;
+}
+.user-subtitle-text {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 17px;
+	color: #767676;
+}
+</style>
