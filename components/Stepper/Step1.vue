@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<div class="d-flex justify-left align-center pb-6 pt-2">
+		<div class="d-flex justify-left align-center pb-6 pt-2 px-5">
 			<img src="@/assets/building_icon.png" alt="Building" height="42" class="mr-5" />
 			<div>
 				<h5 class="header-text text-h6">Company Details</h5>
@@ -33,4 +33,17 @@ export default {
 }
 </script>
 
-<style></style>
+<style scoped>
+.header-text {
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 24px;
+	color: #26467e;
+}
+.subtitle-text {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 139.52%;
+	color: #2c2a2a;
+}
+</style>

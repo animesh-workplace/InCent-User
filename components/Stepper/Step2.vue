@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<div class="d-flex justify-left align-center pb-6 pt-2">
+		<div class="d-flex justify-left align-center pb-6 pt-2 px-5">
 			<img src="@/assets/user_icon.png" alt="Users" height="42" class="mr-5" />
 			<div>
 				<h5 class="header-text text-h6">Add Users</h5>
