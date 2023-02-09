@@ -48,6 +48,15 @@
 				</v-card-actions>
 			</v-card>
 		</v-dialog>
+
+		<div class="mt-6 text-center">
+			<v-btn outlined color="design" class="px-7">Back</v-btn>
+			<div class="ml-4 d-inline">
+				<v-btn dark color="design" class="text-center px-6" @click="NextButton">
+					Next<v-icon>mdi-chevron-right</v-icon>
+				</v-btn>
+			</div>
+		</div>
 	</div>
 </template>
 
@@ -62,6 +71,9 @@ export default {
 		FormSaved() {
 			this.dialog1 = false
 			this.dialog2 = true
+		},
+		NextButton() {
+			this.$emit('NextStep3')
 		},
 	},
 	mounted() {
