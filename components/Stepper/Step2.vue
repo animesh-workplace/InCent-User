@@ -23,8 +23,29 @@
 			</div>
 		</div>
 
-		<v-dialog v-model="dialog" max-width="1200">
+		<!-- 		<v-dialog v-model="dialog" max-width="900">
 			<FormAddUser />
+		</v-dialog> -->
+
+		<v-dialog v-model="dialog" max-width="400">
+			<v-card class="pt-10 pb-4 px-4">
+				<v-card-text class="text-center font-title">
+					<div class="d-block mb-2">
+						<img src="@/assets/check_icon.png" alt="" />
+					</div>
+					<div>
+						User <span class="design--text">Vedant Parte</span> was Saved in your Company Profile.
+					</div>
+				</v-card-text>
+
+				<v-card-actions>
+					<div class="mx-auto">
+						<v-btn outlined rounded color="blue" class="mb-4">
+							<v-icon small class="mr-2">mdi-plus</v-icon>Add new user
+						</v-btn>
+					</div>
+				</v-card-actions>
+			</v-card>
 		</v-dialog>
 	</div>
 </template>
@@ -71,5 +92,13 @@ export default {
 	font-size: 14px;
 	line-height: 17px;
 	color: #767676;
+}
+.font-title {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 19px;
+	text-align: center;
+	color: #2c2a2a;
 }
 </style>
