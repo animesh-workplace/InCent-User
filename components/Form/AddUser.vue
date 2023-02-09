@@ -27,4 +27,18 @@ export default {
 }
 </script>
 
-<style></style>
+<style scoped>
+.header-text {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 24px;
+	color: #26467e;
+}
+.subtitle-text {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 139.52%;
+	color: #2c2a2a;
+}
+</style>
