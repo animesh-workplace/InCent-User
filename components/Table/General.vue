@@ -2,7 +2,7 @@
 	<table>
 		<tr class="text-center">
 			<td class="text-right">
-				<h3 class="company-title">Registered Company Name <sup class="red--text">*</sup></h3>
+				<h3 class="company-title mb-3">Registered Company Name <sup class="red--text">*</sup></h3>
 			</td>
 			<td>
 				<v-text-field
@@ -98,7 +98,7 @@ td {
 	font-weight: 400;
 	font-style: normal;
 	line-height: 19px;
-	font-size: 15px;
+	font-size: 13px;
 }
 .company-subtitle {
 	font-style: normal;
