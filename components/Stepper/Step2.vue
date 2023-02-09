@@ -17,17 +17,17 @@
 			<div class="text-center">
 				<h5 class="user-text">No Users added yet</h5>
 				<h5 class="user-subtitle-text mb-10">Start by adding your first user</h5>
-				<v-btn outlined rounded color="design" @click="dialog = true">
+				<v-btn outlined rounded color="design" @click="dialog1 = true">
 					<v-icon class="mr-2">mdi-plus</v-icon>Add new user
 				</v-btn>
 			</div>
 		</div>
 
-		<!-- 		<v-dialog v-model="dialog" max-width="900">
-			<FormAddUser />
-		</v-dialog> -->
+		<v-dialog v-model="dialog1" max-width="900">
+			<FormAddUser @UserSaved="FormSaved" />
+		</v-dialog>
 
-		<v-dialog v-model="dialog" max-width="400">
+		<v-dialog v-model="dialog2" max-width="400">
 			<v-card class="pt-10 pb-4 px-4">
 				<v-card-text class="text-center font-title">
 					<div class="d-block mb-2">
@@ -40,6 +40,7 @@
 
 				<v-card-actions>
 					<div class="mx-auto">
+						<!-- Need to add stepper reducer to reduce to step 1 -->
 						<v-btn outlined rounded color="blue" class="mb-4">
 							<v-icon small class="mr-2">mdi-plus</v-icon>Add new user
 						</v-btn>
@@ -53,10 +54,16 @@
 <script>
 export default {
 	data: () => ({
-		dialog: false,
+		dialog1: false,
+		dialog2: false,
 	}),
 	components: {},
-	methods: {},
+	methods: {
+		FormSaved() {
+			this.dialog1 = false
+			this.dialog2 = true
+		},
+	},
 	mounted() {
 		this.$nextTick(() => {})
 	},
