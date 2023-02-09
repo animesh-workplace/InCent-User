@@ -1,0 +1,22 @@
+html {
+	overflow-y: auto !important;
+}
+
+.theme--light.v-stepper .v-stepper__step--editable:hover {
+	background: none !important;
+}
+
+.v-stepper__step__step {
+	height: 35px !important;
+	width: 35px !important;
+}
+
+/*.v-input__slot::before,
+.v-input__slot::after {
+	border-style: none !important;
+}*/
+
+/*.v-text-field--outlined fieldset {
+	border: 1px solid #cbcbcb !important;
+	border-radius: 3px !important;
+}*/
