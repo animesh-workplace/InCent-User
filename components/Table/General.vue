@@ -63,7 +63,7 @@
 				<h3 class="company-title mb-3">Billing Address</h3>
 			</td>
 			<td>
-				<v-text-field
+				<v-textarea
 					outlined
 					class="mt-2"
 					persistent-hint
