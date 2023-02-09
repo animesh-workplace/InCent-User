@@ -18,8 +18,8 @@
 		</div>
 
 		<v-sheet class="rounded-lg center pt-4 px-6 pb-10" elevation="4">
-			<!-- <StepperStep1 /> -->
-			<StepperStep2 />
+			<StepperStep1 />
+			<!-- <StepperStep2 /> -->
 		</v-sheet>
 	</v-sheet>
 </template>
