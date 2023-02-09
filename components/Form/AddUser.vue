@@ -12,7 +12,7 @@
 			<TableUser />
 
 			<div class="text-center my-8">
-				<v-btn outlined color="design" class="mb-4">Save user</v-btn>
+				<v-btn outlined color="design" class="mb-4" @click="SaveUser">Save user</v-btn>
 				<h6 class="small-text">You can view the above user’s details after saving the changes</h6>
 			</div>
 		</div>
@@ -23,7 +23,11 @@
 export default {
 	data: () => ({}),
 	components: {},
-	methods: {},
+	methods: {
+		SaveUser() {
+			this.$emit('UserSaved')
+		},
+	},
 	mounted() {
 		this.$nextTick(() => {})
 	},
