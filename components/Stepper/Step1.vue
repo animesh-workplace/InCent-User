@@ -16,7 +16,7 @@
 		<div class="mt-6 text-center">
 			<v-btn outlined color="design" class="px-7">Back</v-btn>
 			<div class="ml-4 d-inline">
-				<v-btn dark color="design" class="text-center px-6">
+				<v-btn dark color="design" class="text-center px-6" @click="NextButton">
 					Next<v-icon>mdi-chevron-right</v-icon>
 				</v-btn>
 			</div>
@@ -28,7 +28,11 @@
 export default {
 	data: () => ({}),
 	components: {},
-	methods: {},
+	methods: {
+		NextButton() {
+			this.$emit('NextStep2')
+		},
+	},
 	mounted() {
 		this.$nextTick(() => {})
 	},
