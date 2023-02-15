@@ -16,17 +16,23 @@
 					:to="item.to"
 					class="white--text"
 					v-for="(item, i) in items"
-					:class="item.title == 'Company Applications' ? 'white' : ''"
+					:class="selected_tab == item.title ? 'white' : ''"
 				>
 					<v-list-item-action>
-						<v-icon :color="item.title == 'Company Applications' ? 'design' : 'white'">
-							{{ item.icon }}
-						</v-icon>
+						<img
+							width="26"
+							:alt="`Icon-${item.icon}`"
+							:src="
+								require(`../../assets/SideBar/${
+									selected_tab == item.title ? item.icon_active : item.icon
+								}`)
+							"
+						/>
 					</v-list-item-action>
 					<v-list-item-content>
 						<v-list-item-title
 							v-text="item.title"
-							:class="item.title == 'Company Applications' ? 'design--text' : 'white--text'"
+							:class="selected_tab == item.title ? 'design--text' : 'white--text'"
 						/>
 					</v-list-item-content>
 				</v-list-item>
@@ -40,27 +46,53 @@
 </template>
 
 <script>
+import { mapFields } from 'vuex-map-fields'
+
 export default {
 	data: () => ({
 		visible: true,
 		items: [
 			{
-				icon: 'mdi-view-dashboard',
+				to: '/',
 				title: 'Dashboard',
-				to: '/',
+				icon: 'dashboard_icon.png',
+				icon_active: 'dashboard_icon.png',
 			},
 			{
-				icon: 'mdi-server',
+				to: '/',
 				title: 'Add Master Channels',
-				to: '/',
+				icon: 'add_masterchannel_icon.png',
+				icon_active: 'add_masterchannel_icon.png',
 			},
 			{
-				icon: 'mdi-office-building-outline',
-				title: 'Company Applications',
+				to: '/program',
+				icon: 'add_program_icon.png',
+				title: 'Add Program Inventory',
+				icon_active: 'add_program_active_icon.png',
+			},
+			{
 				to: '/',
+				title: 'Add Auctions',
+				icon: 'add_auction_icon.png',
+				icon_active: 'add_auction_icon.png',
+			},
+			{
+				to: '/',
+				title: 'Bid on Auctions',
+				icon: 'bid_auction_icon.png',
+				icon_active: 'bid_auction_icon.png',
+			},
+			{
+				to: '/sales',
+				icon: 'sales_icon.png',
+				title: 'Buy Program Inventory',
+				icon_active: 'sales_active_icon.png',
 			},
 		],
 	}),
+	computed: {
+		...mapFields(['selected_tab']),
+	},
 	methods: {
 		HideNav() {
 			this.visible = !this.visible
